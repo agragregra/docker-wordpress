@@ -49,3 +49,9 @@ Import DB:
 ```
 docker compose exec -T db mysql -u root -p"root" wp_db < dump.sql
 ```
+
+View/Remove Images:
+```
+docker images -a
+docker rmi -f $(docker images -a -q)
+```
