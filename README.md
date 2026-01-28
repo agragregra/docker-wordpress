@@ -15,6 +15,12 @@ Start Docker:
 sudo service docker start
 ```
 
+Permissions:
+```
+chmod +x run.sh
+sudo chown -R $USER:$USER .
+```
+
 Run:
 ```
 ./run.sh {up|down|backup}
@@ -32,12 +38,6 @@ $_SERVER['HTTPS'] = 'on';
 Unpack
 ```
 set -- *.tar.gz; tar -xf "$1"
-```
-
-Project folder:
-```
-chmod +x run.sh
-sudo chown -R $USER:$USER .
 ```
 
 Recreate DB:
