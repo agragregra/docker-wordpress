@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mariadb:10.11
+    volumes: ["./data:/var/lib/mysql"]
+    environment: { MYSQL_ROOT_PASSWORD: root, MYSQL_DATABASE: wp_db }
+
+  wordpress:
+    image: wordpress:6.7
+    volumes: ["./app:/var/www/html"]
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: wp_db
+
+  proxy:
+    image: caddy:2-alpine
+    ports: ["8888:443"]
+    command: caddy reverse-proxy --from localhost --to wordpress:80
