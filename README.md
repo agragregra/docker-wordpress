@@ -56,7 +56,7 @@ docker images -a
 docker rmi -f $(docker images -a -q)
 ```
 
-Configuring add & remove plugins from the admin panel (Docker):
+Add & remove plugins from the admin panel (Docker):
 Settings in wp-config.php:
 ```
 define('FS_METHOD', 'direct');
