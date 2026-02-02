@@ -55,3 +55,13 @@ View/Remove Images:
 docker images -a
 docker rmi -f $(docker images -a -q)
 ```
+
+Configuring add & remove plugins from the admin panel (Docker):
+Settings in wp-config.php:
+```
+define('FS_METHOD', 'direct');
+```
+Permissions:
+```
+sudo chown -R www-data:www-data .
+```
