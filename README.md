@@ -19,6 +19,7 @@ Permissions:
 ```
 chmod +x run.sh
 sudo chown -R $USER:$USER .
+newgrp docker -c "./run.sh up"
 ```
 
 Run:
