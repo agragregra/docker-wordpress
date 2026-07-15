@@ -2,7 +2,7 @@
 
 Clone:
 ```
-git clone https://github.com/agragregra/docker-wordpress .; rm -rf trunk .git
+git clone https://github.com/wdmcourses/docker-wordpress .; rm -rf trunk .git
 ```
 
 Install Docker:
